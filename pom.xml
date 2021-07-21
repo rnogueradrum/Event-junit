@@ -21,11 +21,12 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner -->
-		<!-- Para crear suites de testing -->
+		<!-- <version>1.8.0-M1</version> Para crear suites de testing -->
 		<dependency>
 			<groupId>org.junit.platform</groupId>
 			<artifactId>junit-platform-runner</artifactId>
-			<version>1.8.0-M1</version>
+			<version>1.4.2</version>
+			
 			<scope>test</scope>
 		</dependency>
 		
