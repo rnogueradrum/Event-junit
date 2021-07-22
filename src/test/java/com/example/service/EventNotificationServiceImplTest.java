@@ -55,5 +55,18 @@ class EventNotificationServiceImplTest {
         
         }
     
+    @Order(6)
+    @Test
+    @DisplayName("If Attendees isEmpty Test")
+    void announceIfAttendeesIsEmptyTest() {
+    	
+    	assertTrue(myEvent.getAttendees().isEmpty());
+        
+    	myEvent.notifyAssistants();
+        assertTrue(myEvent.getAttendees().isEmpty());
+        
+        }
+    
+    
     
 }
