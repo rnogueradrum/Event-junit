@@ -42,5 +42,19 @@ class EventTest {
 		assertEquals(0,myEvent.getAttendees().size());
 		
 	}
+	
+	@Order(4)
+    @Test
+    @DisplayName("If Attendees null addAttendee Test")
+	void addAttendeesNullAttendeetest() {
+		
+		myEvent.setAttendees(null);
+		assertNull(myEvent.getAttendees());
+		
+		myEvent.addAttendee(asistente1);
+		assertEquals(1,myEvent.getAttendees().size());
+		assertNotNull(myEvent.getAttendees());
+		
+	}
 
 }
