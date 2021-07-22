@@ -42,6 +42,18 @@ class EventNotificationServiceImplTest {
     	assertNull(myEvent);
         }
     
+    @Order(4)
+    @Test
+    @DisplayName("If Attendees Null Test")
+    void announceIfAttendeesNullTest() {
+    	
+    	myEvent.setAttendees(null);
+    	assertNull(myEvent.getAttendees());
+    	
+    	myEvent.notifyAssistants();
+        assertNull(myEvent.getAttendees());
+        
+        }
     
-
+    
 }
