@@ -106,6 +106,20 @@ class EventNotificationServiceImplTest {
 		
 	}
     
+    @Order(12)
+    @DisplayName("If Attendee null ConfirmAttendance Test")
+	@Test
+	void confirmAttendanceIfAttendeeNullTest() {
+    	
+    	assertNotNull(myEvent);
+    	
+    	asistente1 = null;
+        assertNull(asistente1);
+    	
+    	eventNotificationService.confirmAttendance(myEvent, asistente1);
+    	assertNull(asistente1);
+		
+	}
     
-
+    
 }
