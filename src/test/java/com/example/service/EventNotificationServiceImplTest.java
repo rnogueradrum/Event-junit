@@ -121,5 +121,18 @@ class EventNotificationServiceImplTest {
 		
 	}
     
-    
+    @Order(14)
+    @DisplayName("If valid Event and Attendee ConfirmAttendance Test")
+	@Test
+	void confirmAttendanceValidTest() {
+    	
+    	assertNotNull(myEvent);
+  
+        assertNotNull(asistente1);
+    	
+    	eventNotificationService.confirmAttendance(myEvent, asistente1);
+    	assertNotNull(asistente1.getNotifications().get(0).getMessage());
+		System.out.println(asistente1.getNotifications().get(0).getMessage());
+	}
+
 }
